@@ -32,19 +32,19 @@
         }
 
         #board {
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(8, 1fr);
-            width: 95vw;          /* スマホでは画面幅の95% */
-            height: 95vw;         /* 正方形を維持 */
-            max-width: 500px;     /* PCでは最大500px（800pxの枠内に収める） */
-            max-height: 500px;
-            margin: 20px auto;    /* 盤面の中央寄せ */
-            background: #007700;
-            border: 4px solid #333;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        }
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  
+  /* 修正ポイント：幅を画面に合わせ、最大サイズを制限 */
+  width: 90vw;          /* スマホ画面の90%に設定 */
+  height: 90vw;         /* 正方形を維持 */
+  max-width: 450px;     /* PCで見た時の最大サイズ */
+  max-height: 450px;
+  
+  margin: 10px auto;    /* 左右中央寄せ */
+  box-sizing: border-box; /* 枠線を幅の中に含める */
+}
 
         .cell {
             border: 1px solid #004400;
